@@ -12,12 +12,14 @@ public class Loads {
 
     private RealMatrix loadMatrix;
 
-    public Loads(double pData, double lData, double xData, double qData, double mData) {
+    public Loads(double pData, double lData, double xData, double qData, double mData, String choose) {
         this.p = pData;
         this.l = lData;
         this.x = xData;
         this.q = qData;
         this.m = mData;
+
+        chooseLoad(choose);
     }
 
     private void pointLoad() {
@@ -62,6 +64,22 @@ public class Loads {
 
     private void trapezoidalDistributedLoad() {
         // Todo - triangular + uniformly = trapezoidal
+        System.out.println("Todo - Trapezoidal Load");
+    }
+
+    private void chooseLoad(String choose){
+        switch (choose) {
+            case "pointLoad":
+                pointLoad();
+            case "uniformlyLoad":
+                uniformlyDistributedLoad();
+            case "triangularLoad":
+                triangularDistributedLoad();
+            case "trapezoidalLoad":
+                trapezoidalDistributedLoad();
+            case "pointMomentLoad":
+                pointMoment();
+        }
     }
 
 
