@@ -1,4 +1,4 @@
-package GuiControllers;
+package pl.pawz.statsMS.GuiControllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -63,16 +63,15 @@ public class MainWindowController {
         window.show();
 
 
-
     }
 
     public void drawLine() {
         data = modelFXML.getData();
         System.out.println(Arrays.toString(data));
 
-        Line line = new Line(i,i,i+100,i+100);
+        Line line = new Line(i, i, i + 100, i + 100);
         scroll.getChildren().addAll(line);
-        i=i+100;
+        i = i + 100;
 
 
     }

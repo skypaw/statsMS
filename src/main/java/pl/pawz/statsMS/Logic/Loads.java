@@ -1,4 +1,4 @@
-package Logic;
+package pl.pawz.statsMS.Logic;
 
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
@@ -67,18 +67,23 @@ public class Loads {
         System.out.println("Todo - Trapezoidal Load");
     }
 
-    private void chooseLoad(String choose){
+    private void chooseLoad(String choose) {
         switch (choose) {
             case "pointLoad":
                 pointLoad();
+                break;
             case "uniformlyLoad":
                 uniformlyDistributedLoad();
+                break;
             case "triangularLoad":
                 triangularDistributedLoad();
+                break;
             case "trapezoidalLoad":
                 trapezoidalDistributedLoad();
+                break;
             case "pointMomentLoad":
                 pointMoment();
+                break;
         }
     }
 

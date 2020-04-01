@@ -1,4 +1,4 @@
-package GuiControllers;
+package pl.pawz.statsMS.GuiControllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -25,7 +25,7 @@ public class ModelController {
 
     MainWindowController Controller = new MainWindowController();
 
-    public void initialize(){
+    public void initialize() {
         System.out.println("Window created");
     }
 

@@ -1,11 +1,8 @@
-package GuiControllers;
+package pl.pawz.statsMS.GuiControllers;
 
-import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
-import java.net.URL;
 
 public class LoadsController {
     @FXML

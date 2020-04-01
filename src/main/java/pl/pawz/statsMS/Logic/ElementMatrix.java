@@ -1,4 +1,4 @@
-package Logic;
+package pl.pawz.statsMS.Logic;
 
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
@@ -21,11 +21,11 @@ public class ElementMatrix {
     }
 
     private void creatingMatrix() {
-        double ma = eYoungModule * aCrossSection * Math.pow(lLengthOfBeam, 2);
-        double m12 = 12 * eYoungModule * iMomentOfInertia;
-        double m6 = 6 * eYoungModule * iMomentOfInertia * lLengthOfBeam;
-        double m4 = 4 * eYoungModule * iMomentOfInertia * Math.pow(lLengthOfBeam, 2);
-        double m2 = 2 * eYoungModule * iMomentOfInertia * Math.pow(lLengthOfBeam, 2);
+        double ma = eYoungModule * aCrossSection * Math.pow(lLengthOfBeam, 2) / Math.pow(lLengthOfBeam, 3);
+        double m12 = 12 * eYoungModule * iMomentOfInertia / Math.pow(lLengthOfBeam, 3);
+        double m6 = 6 * eYoungModule * iMomentOfInertia * lLengthOfBeam / Math.pow(lLengthOfBeam, 3);
+        double m4 = 4 * eYoungModule * iMomentOfInertia * Math.pow(lLengthOfBeam, 2) / Math.pow(lLengthOfBeam, 3);
+        double m2 = 2 * eYoungModule * iMomentOfInertia * Math.pow(lLengthOfBeam, 2) / Math.pow(lLengthOfBeam, 3);
 
         double[][] matrixData = {{ma, 0, 0, -ma, 0, 0},
                 {0, m12, m6, 0, -m12, m6},
@@ -36,10 +36,9 @@ public class ElementMatrix {
         matrix = MatrixUtils.createRealMatrix(matrixData);
 
         System.out.println(matrix);
-
     }
 
-    public RealMatrix getMatrix(){
+    public RealMatrix getMatrix() {
         return matrix;
     }
 

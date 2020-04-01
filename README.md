@@ -1,5 +1,5 @@
 ## statsMS
-Main goal of this project is to create a GUI application, for calculate forces in basic structures.
+pl.pawz.statsMS.Main goal of this project is to create a GUI application, for calculate forces in basic structures.
 
 ####To do list:
 - [ ] create functional GUI

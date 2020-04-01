@@ -1,4 +1,4 @@
-package GuiControllers;
+package pl.pawz.statsMS.GuiControllers;
 
 import javafx.scene.control.TextField;
 
