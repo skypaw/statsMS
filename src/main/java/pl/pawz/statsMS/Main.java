@@ -19,7 +19,6 @@ public class Main {
         double l = 5;
 
         ElementMatrix test1 = new ElementMatrix(e, a, i, l);
-
         localMatrix = test1.getMatrix();
 
         Loads test2 = new Loads(0, l, l, q, 0, "uniformlyLoad");
